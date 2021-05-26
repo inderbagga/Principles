@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Principles">
-        <activity android:name=".solid.activity.OpenClosedActivity">
+        <activity android:name=".solid.activity.SingleResponsibilityActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".solid.activity.SingleResponsibilityActivity"/>
+        <activity android:name=".solid.activity.OpenClosedActivity"/>
     </application>
 
 </manifest>

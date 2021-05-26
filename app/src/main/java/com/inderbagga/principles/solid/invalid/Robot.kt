@@ -6,6 +6,6 @@ secondly, it’s concerned with how our robot is communicating.*/
 class Robot(val name: String, val type: String) {
 
     fun communicate() {
-        println("Hello my name is $name, and I am a $type robot")
+        println("Hello my name is $name, and I am a $type.")
     }
 }

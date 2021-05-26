@@ -1,13 +1,13 @@
 package com.inderbagga.principles.solid
 
 //This means dependent classes on oHotel need not change, when we create new classes derived from oHotel.
-interface oHotel {
+interface OHotel {
     fun getPrice():Int
 
     var occupants: Int
 }
 
-class Oyo(val dHotel:dHotel) : oHotel{
+class Oyo(val dHotel:dHotel) : OHotel{
 
     override var occupants: Int = 0
 
@@ -15,7 +15,7 @@ class Oyo(val dHotel:dHotel) : oHotel{
         dHotel.basePrice
 }
 
-class Taj(val dHotel:dHotel) : oHotel{
+class Taj(val dHotel:dHotel) : OHotel{
 
     override fun getPrice(): Int =
         dHotel.basePrice + ((dHotel.basePrice*dHotel.gst)/100).toInt()
@@ -23,7 +23,7 @@ class Taj(val dHotel:dHotel) : oHotel{
     override var occupants: Int =0
 }
 
-class Hyatt(val dHotel:dHotel) : oHotel{
+class Hyatt(val dHotel:dHotel) : OHotel{
 
     override fun getPrice(): Int =
         dHotel.basePrice + ((dHotel.basePrice*dHotel.gst)/100).toInt() + dHotel.parkFee
@@ -36,7 +36,7 @@ class Hyatt(val dHotel:dHotel) : oHotel{
 
 data class dHotel(val basePrice:Int,val gst:Float,val parkFee:Int)
 
-class HotelAssociation(val hotels:List<oHotel>){
+class HotelAssociation(val hotels:List<OHotel>){
 
     fun getDailySales(): Int{
 

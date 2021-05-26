@@ -2,8 +2,8 @@ package com.inderbagga.principles.solid.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.inderbagga.principles.Robot
 import com.inderbagga.principles.solid.*
+import com.inderbagga.principles.solid.invalid.*
 
 class SingleResponsibilityActivity : AppCompatActivity() {
 
@@ -14,7 +14,7 @@ class SingleResponsibilityActivity : AppCompatActivity() {
         averageRobot.communicate()
 
         //Showcasing Single Responsibility Principal
-        val smartRobot= sRobot("Alita","Battle Angel")
+        val smartRobot= SRobot("Alita","Battle Angel")
 
         Communicate().intro(smartRobot)
     }

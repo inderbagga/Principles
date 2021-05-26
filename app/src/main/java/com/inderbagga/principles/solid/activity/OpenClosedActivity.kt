@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.inderbagga.principles.*
 import com.inderbagga.principles.solid.*
+import com.inderbagga.principles.solid.invalid.*
+import com.inderbagga.principles.solid.invalid.HuaweiMobileServices
+import com.inderbagga.principles.solid.invalid.MobilePhoneUser
 
 class OpenClosedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,5 +39,33 @@ class OpenClosedActivity : AppCompatActivity() {
 
             println("Total Association Sales are worth INR $it.")
         }
+
+        //=============================================================
+
+        val phoneA=MobilePhone()
+        phoneA.brandName="Samsung"
+
+        val huaweiMobileServices= HuaweiMobileServices()
+        huaweiMobileServices.addMobileServiceToPhone(phoneA)
+
+        val userA=MobilePhoneUser()
+        userA.runMobileDevice(huaweiMobileServices,phoneA)
+
+        //Showcasing  Open and Closed Principal
+        val oJioMobileServices=SmartMobileServices("Jio")
+        oJioMobileServices.addMobileServiceToPhone(phoneA)
+
+        val smartUserA=OMobilePhoneUser()
+        smartUserA.runMobileDevice(oJioMobileServices,phoneA)
+
+        val phoneB=MobilePhone()
+        phoneB.brandName="Apple"
+
+        val oAirtelMobileServices=SmartMobileServices("Airtel")
+        oAirtelMobileServices.addMobileServiceToPhone(phoneB)
+
+        val smartUserB=OMobilePhoneUser()
+        smartUserB.runMobileDevice(oAirtelMobileServices,phoneB)
+
     }
 }
