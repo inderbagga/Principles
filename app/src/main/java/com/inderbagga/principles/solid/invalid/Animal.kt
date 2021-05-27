@@ -1,7 +1,5 @@
 package com.inderbagga.principles.solid.invalid
 
-import android.location.Location
-
 abstract class Animal {
 
     abstract fun jump()
@@ -11,12 +9,9 @@ abstract class Animal {
 
 class Kangaroo : Animal(){
 
-    override fun jump() {
-    }
+    override fun jump() {}
 
-    override fun goToLocation() {
-    }
-
+    override fun goToLocation() {}
 }
 
 class Elephant : Animal(){
@@ -25,7 +20,6 @@ class Elephant : Animal(){
         println("Elephant can't jump!")
     }
 
-    override fun goToLocation() {
-    }
+    override fun goToLocation() {}
 
 }

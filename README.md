@@ -20,7 +20,13 @@
    * It means that whenever we are writing a new functionality, we should not modify existing code. We should rather write new code which will be used by existing code.
    * We do this by creating abstractions, in languages such as kotlin we can use interfaces, this abstraction should then be injected where needed. The aim of this is to drive a modular design.
    
- ### Liskov substitution Principle
+ ### Liskov Substitution Principle
    In simple words, child class must be substitutable for the parent class.
-   * Since child classes extended from the parent classes, they inherit their behavior. 
+   * Since child classes extended from the parent classes, they inherit their behavior.
+
+  ### Interface Segregation Principle
+    No client should be forced to depend on methods it does not use.
+    * It means that a class should contain as many minimum methods as possible. Any interface that class inherits should consist of methods which are required by the class.
+
+
   

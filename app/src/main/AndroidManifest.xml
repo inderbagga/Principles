@@ -19,6 +19,7 @@
 
         <activity android:name=".solid.activity.LiskovSubstitutionActivity"/>
         <activity android:name=".solid.activity.OpenClosedActivity"/>
+        <activity android:name=".solid.activity.InterfaceSegrigationActivity"/>
     </application>
 
 </manifest>
