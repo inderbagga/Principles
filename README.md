@@ -28,5 +28,11 @@
     No client should be forced to depend on methods it does not use.
     * It means that a class should contain as many minimum methods as possible. Any interface that class inherits should consist of methods which are required by the class.
 
+  ### Dependency Inversion Principle
+    Depend on abstractions, not on details.
+    * It tells us about the coupling between the different classes or modules.
+    * High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g. interfaces). It is based on removing the dependency with the interface.
+    * Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
+
 
   
